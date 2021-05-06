@@ -1,0 +1,438 @@
+{
+	"info": {
+		"_postman_id": "a8f709c7-0947-4270-8cbf-9e9e20820bdc",
+		"name": "rideshare",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "{{url}}api/check/username",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "sureshmaurya87",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}api/check/username/",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"check",
+						"username",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}api/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "suresh",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "kumar",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "+917347654347",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "profile_pic",
+							"type": "file",
+							"src": "/home/ganesha-webtech/Downloads/images/1163657.jpg"
+						},
+						{
+							"key": "username",
+							"value": "sureshmaurya87",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}api/signup/",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}api/verify/otp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "otp",
+							"value": "670098",
+							"type": "text"
+						},
+						{
+							"key": "otp_token",
+							"value": "ride_share_16174705536068a459a5729",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}api/verify/otp/",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"verify",
+						"otp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}api/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "sureshmaurya874",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}api/login/",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}api/forgot/password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "sureshmaurya87",
+							"description": "username or mobile number can be sent in username parameter",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}api/forgot/password/",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"forgot",
+						"password",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}api/reset/password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJpZCI6IjIiLCJmaXJzdF9uYW1lIjoic3VyZXNoIiwibGFzdF9uYW1lIjoia3VtYXIiLCJ1c2VybmFtZSI6InN1cmVzaG1hdXJ5YTg3IiwibW9iaWxlIjoiNzM0NzY1NDM0NyIsIm1vYmlsZV92ZXJpZmllZCI6IjEiLCJwcm9maWxlX3BpYyI6IlwvdXBsb2Fkc1wvcHJvZmlsZV9pbWFnZXNcLzYwNjM2OTRmYjZkNzItMTYxNzEyNzc1OTlYTV9sb2dvLnBuZyIsImVtYWlsX3ZlcmlmaWVkX2F0IjpudWxsLCJwYXNzd29yZCI6IiQyeSQxMCRtMERDOW1iQWZsaDJCam9EZDllc0F1YjlZemlEVjN0RFZJTVdjRkNhazJIQ1pjem91TFwvNzIiLCJyZW1lbWJlcl90b2tlbiI6bnVsbCwib3RwIjoiNjcwMDk4Iiwib3RwX3Rva2VuIjoicmlkZV9zaGFyZV8xNjE3NDcwNTUzNjA2OGE0NTlhNTcyOSIsImNyZWF0ZWRfYXQiOiIyMDIxLTAzLTI3IDA3OjQ4OjA2IiwidXBkYXRlZF9hdCI6IjIwMjEtMDQtMDMgMjI6NTI6MzMifQ==bcf3c0ded0d7111d72db",
+						"description": "Bearer reset_password_token",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "password",
+							"value": "1234567",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}api/reset/password/",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"reset",
+						"password",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}api/get/profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJpZCI6IjMwIiwiZmlyc3RfbmFtZSI6InN1cmVzaCIsImxhc3RfbmFtZSI6Imt1bWFyIiwidXNlcm5hbWUiOiJzdXJlc2htYXVyeWE4NzQiLCJtb2JpbGUiOiI3MzQ3NjU0MzQ1IiwibW9iaWxlX3ZlcmlmaWVkIjoiMSIsInByb2ZpbGVfcGljIjoidXBsb2FkXC8xMTYzNjU3LmpwZyIsImVtYWlsX3ZlcmlmaWVkX2F0IjpudWxsLCJwYXNzd29yZCI6IlRWUkplazVFVlRJPSIsInJlbWVtYmVyX3Rva2VuIjpudWxsLCJvdHAiOm51bGwsIm90cF90b2tlbiI6bnVsbCwiY3JlYXRlZF9hdCI6IjIwMjEtMDQtMDMgMjE6NTM6MTQiLCJ1cGRhdGVkX2F0IjoiMjAyMS0wNC0wMyAyMTo1MzozNCJ95166ec94351bcdd44a31",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}api/get/profile",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"get",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}api/update/profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJpZCI6IjMwIiwiZmlyc3RfbmFtZSI6InN1cmVzaCIsImxhc3RfbmFtZSI6Imt1bWFyIiwidXNlcm5hbWUiOiJzdXJlc2htYXVyeWE4NzQiLCJtb2JpbGUiOiI3MzQ3NjU0MzQ1IiwibW9iaWxlX3ZlcmlmaWVkIjoiMSIsInByb2ZpbGVfcGljIjoidXBsb2FkXC8xMTYzNjU3LmpwZyIsImVtYWlsX3ZlcmlmaWVkX2F0IjpudWxsLCJwYXNzd29yZCI6IlRWUkplazVFVlRJPSIsInJlbWVtYmVyX3Rva2VuIjpudWxsLCJvdHAiOm51bGwsIm90cF90b2tlbiI6bnVsbCwiY3JlYXRlZF9hdCI6IjIwMjEtMDQtMDMgMjE6NTM6MTQiLCJ1cGRhdGVkX2F0IjoiMjAyMS0wNC0wMyAyMTo1MzozNCJ95166ec94351bcdd44a31",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "suresh",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "maurya",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "7347654345",
+							"type": "text"
+						},
+						{
+							"key": "profile_pic",
+							"type": "file",
+							"src": "/home/ganesha-webtech/Downloads/images/Chivas-Regal.jpg"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}api/update/profile/",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"update",
+						"profile",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}api/send/otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "sureshmaurya87",
+							"description": "username or mobile number in value",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}api/send/otp/",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"send",
+						"otp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}api/post/create/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJpZCI6IjMwIiwiZmlyc3RfbmFtZSI6InN1cmVzaCIsImxhc3RfbmFtZSI6Imt1bWFyIiwidXNlcm5hbWUiOiJzdXJlc2htYXVyeWE4NzQiLCJtb2JpbGUiOiI3MzQ3NjU0MzQ1IiwibW9iaWxlX3ZlcmlmaWVkIjoiMSIsInByb2ZpbGVfcGljIjoidXBsb2FkXC8xMTYzNjU3LmpwZyIsImVtYWlsX3ZlcmlmaWVkX2F0IjpudWxsLCJwYXNzd29yZCI6IlRWUkplazVFVlRJPSIsInJlbWVtYmVyX3Rva2VuIjpudWxsLCJvdHAiOm51bGwsIm90cF90b2tlbiI6bnVsbCwiY3JlYXRlZF9hdCI6IjIwMjEtMDQtMDMgMjE6NTM6MTQiLCJ1cGRhdGVkX2F0IjoiMjAyMS0wNC0wMyAyMTo1MzozNCJ95166ec94351bcdd44a31",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "location_from",
+							"value": "sector 117 panchkula",
+							"type": "text"
+						},
+						{
+							"key": "destination",
+							"value": "bus stand, sector 43, Chandigarh",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum ",
+							"type": "text"
+						},
+						{
+							"key": "passenger",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "child_seat",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "estimated_time",
+							"value": "20 Minutes",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}api/post/create/",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"post",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}api/post/listings?page=1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJpZCI6IjMwIiwiZmlyc3RfbmFtZSI6InN1cmVzaCIsImxhc3RfbmFtZSI6Imt1bWFyIiwidXNlcm5hbWUiOiJzdXJlc2htYXVyeWE4NzQiLCJtb2JpbGUiOiI3MzQ3NjU0MzQ1IiwibW9iaWxlX3ZlcmlmaWVkIjoiMSIsInByb2ZpbGVfcGljIjoidXBsb2FkXC8xMTYzNjU3LmpwZyIsImVtYWlsX3ZlcmlmaWVkX2F0IjpudWxsLCJwYXNzd29yZCI6IlRWUkplazVFVlRJPSIsInJlbWVtYmVyX3Rva2VuIjpudWxsLCJvdHAiOm51bGwsIm90cF90b2tlbiI6bnVsbCwiY3JlYXRlZF9hdCI6IjIwMjEtMDQtMDMgMjE6NTM6MTQiLCJ1cGRhdGVkX2F0IjoiMjAyMS0wNC0wMyAyMTo1MzozNCJ95166ec94351bcdd44a31",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}api/post/listings?page=1&limit=10",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"post",
+						"listings"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
