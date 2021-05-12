@@ -1,9 +1,12 @@
 import React from 'react'
-import { View, Text, StyleSheet, Image, TouchableOpacity ,Button} from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity,ScrollView } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient'
 
 
-function LandingScrn() {
+function LandingScrn({navigation}) {
     return (
+      <ScrollView>
+      <LinearGradient colors={['#46D5C7', '#6D337E']} style={styles.screen}>
       <View
       style={[styles.container, {
         flexDirection: "column",
@@ -11,28 +14,34 @@ function LandingScrn() {
       }]}
       >
        <View style={styles.LogoLayout}>
-          <Image source={require('../imgs/Rebrand-KCSPR.png')} style={{ width: 180, height: 180 }} />
+          <Image source={require('../assets/Rebrand-KCSPR.png')} style={{ width: 180, height: 180 }} />
         </View>
         <View style={styles.BtnLayout}>
-          <TouchableOpacity style={styles.Btn1}>
+          <TouchableOpacity style={styles.Btn1} onPress={()=>navigation.navigate('Profile')}>
             <Text
              style={styles.BtnTxt} >Sign Up</Text>
           </TouchableOpacity>
         </View>
         <View  style={styles.BtnLayout}>
-          <TouchableOpacity style={styles.Btn2}>
+          <TouchableOpacity style={styles.Btn2} onPress={()=>navigation.navigate('Signin')}>
             <Text
             style={styles.BtnTxt}
           >Sign In</Text>
           </TouchableOpacity>
         </View>
       </View>
+      </LinearGradient>
+      </ScrollView>
     )
 }
 
 export default LandingScrn
 
 const styles = StyleSheet.create({
+  screen: {
+    width: "100%",
+    height: "100%"
+  },
   container: {
     flex: 1,
     padding: 20,
@@ -59,7 +68,6 @@ const styles = StyleSheet.create({
       
     },
     Btn2:{
-      elevation: 8,
       backgroundColor: 'transparent',
       borderRadius: 24,
       paddingVertical: 3,
